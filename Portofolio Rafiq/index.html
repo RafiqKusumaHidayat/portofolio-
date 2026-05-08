@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafiq Kusuma Hidayat - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- SPLASH SCREEN -->
+    <div id="splashScreen" class="splash-screen">
+        <div class="splash-content">
+            <div class="splash-text">WELCOME TO MY</div>
+            <div class="splash-text-sub">WEBSITE PORTOFOLIO</div>
+            <div class="loading-bar-container">
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION MENU - 3 DOT MENU -->
+    <nav class="navbar">
+        <button class="hamburger-menu" id="hamburgerMenu" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" class="mobile-nav-link" data-section="home">Home</a>
+            <a href="#about" class="mobile-nav-link" data-section="about">About Me</a>
+            <a href="#portfolio" class="mobile-nav-link" data-section="portfolio">Portfolio</a>
+            <a href="#contact" class="mobile-nav-link" data-section="contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTAINER -->
+    <div id="mainContent" class="main-content">
+        
+        <!-- HOME SECTION -->
+        <section id="home" class="section home-section">
+            <div class="home-content">
+                <div class="home-text">
+                    <h1 class="title">Hi, I'm Rafiq Kusuma Hidayat</h1>
+                    <p class="subtitle">Web Developer</p>
+                    <p class="description">
+                        A passionate web developer with a strong focus on building responsive, scalable, and user-friendly websites. Skilled in both front-end and back-end development, with hands-on experience in creating modern web applications using the latest technologies. Adept at transforming ideas into functional and visually appealing digital experiences, while ensuring performance, accessibility, and clean code structure.
+                    </p>
+                    <p class="passion">
+                        Experienced in integrating APIs, managing databases, and optimizing web performance to deliver seamless user experiences. Continuously learning and adapting to new tools and frameworks, with a strong commitment to writing efficient, maintainable, and high-quality code.
+                    </p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary" onclick="scrollToSection('contact')">Contact Me</button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('portfolio')">View Projects</button>
+                    </div>
+                </div>
+                <div class="home-visual">
+                    <div class="animated-visual">
+                        <img src="asset/animasi.jpeg" alt="Animation" class="animation-image" onerror="this.style.display='none'">
+                        <div class="visual-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section about-section">
+            <div class="about-content">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-container">
+                    <div class="about-image">
+                        <img id="profileImage" src="asset/tampan.jpeg" alt="Rafiq Kusuma Hidayat" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22400%22%3E%3Crect fill=%22%230066cc%22 width=%22300%22 height=%22400%22 rx=%2215%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2220%22 fill=%22%23fff%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EProfile Photo%3C/text%3E%3C/svg%3E'">
+                    </div>
+                    <div class="about-text">
+                        <h3>Saya adalah mahasiswa Teknologi Rekayasa Informatika</h3>
+                        <p>
+                            Saya adalah mahasiswa Teknologi Rekayasa Informatika Industri di Politeknik Manufaktur Bandung yang memiliki ketertarikan mendalam pada pengembangan website dan Internet of Things (IoT) sebagai fondasi utama dalam menciptakan solusi digital yang inovatif dan berdampak. Bagi saya, teknologi bukan sekadar alat, melainkan sarana untuk menghadirkan perubahan nyata di tengah perkembangan industri yang semakin dinamis. Saya terus mengasah kemampuan dalam membangun aplikasi yang tidak hanya fungsional, tetapi juga memiliki tampilan yang modern, interaktif, dan berorientasi pada pengalaman pengguna. Dengan semangat belajar yang tinggi, saya selalu terbuka terhadap perkembangan teknologi terbaru serta berkomitmen untuk mengintegrasikan kreativitas dan logika dalam setiap proyek yang saya kerjakan. Saya percaya bahwa dengan memanfaatkan teknologi secara tepat, kita dapat menciptakan inovasi yang mampu menjawab tantangan masa kini sekaligus membuka peluang di masa depan.
+                        </p>
+                        <p style="margin-top: 20px; font-style: italic; color: #9d4edd;">
+                            "Leveraging AI as a professional tool, not a replacement."
+                        </p>
+                        <div class="skills-section">
+                            <h4>Skills & Expertise</h4>
+                            <div class="skills-grid">
+                                <span class="skill-badge">HTML</span>
+                                <span class="skill-badge">CSS</span>
+                                <span class="skill-badge">JavaScript</span>
+                                <span class="skill-badge">IoT</span>
+                                <span class="skill-badge">Database</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO SECTION -->
+        <section id="portfolio" class="section portfolio-section">
+            <div class="portfolio-content">
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-subtitle">Explore my recent projects and certifications</p>
+                
+                <div class="portfolio-tabs">
+                    <button class="tab-btn active" data-tab="projects">Projects</button>
+                    <button class="tab-btn" data-tab="certificates">Certificates</button>
+                </div>
+
+                <!-- PROJECTS TAB -->
+                <div id="projects" class="tab-content active">
+                    <div class="portfolio-grid">
+                        
+                        <!-- IoT Projects Carousel -->
+                        <div class="portfolio-card carousel-card">
+                            <div class="card-image carousel-container">
+                                <div class="carousel">
+                                    <div class="carousel-item active">
+                                        <img src="image/project.IOT.jpeg" alt="IoT Project 1" style="width: 100%; height: 250px; object-fit: cover; border-radius: 5px;">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="image/project.iot2.jpeg" alt="IoT Project 2" style="width: 100%; height: 250px; object-fit: cover; border-radius: 5px;">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="image/project.iot3.jpeg" alt="IoT Project 3" style="width: 100%; height: 250px; object-fit: cover; border-radius: 5px;">
+                                    </div>
+                                </div>
+                                <button class="carousel-prev" onclick="changeSlide(this, -1)">❮</button>
+                                <button class="carousel-next" onclick="changeSlide(this, 1)">❯</button>
+                                <div class="carousel-dots">
+                                    <span class="dot active" onclick="goToSlide(this.parentElement.parentElement, 0)"></span>
+                                    <span class="dot" onclick="goToSlide(this.parentElement.parentElement, 1)"></span>
+                                    <span class="dot" onclick="goToSlide(this.parentElement.parentElement, 2)"></span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>IoT Smart Projects</h3>
+                                <p>IoT-based systems with real-time monitoring, sensor integration, and smart automation solutions</p>
+                                <div class="card-tech">
+                                    <span>Python</span>
+                                    <span>IoT</span>
+                                    <span>Sensors</span>
+                                    <span>Real-time</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile & Aplikasi Carousel -->
+                        <div class="portfolio-card carousel-card">
+                            <div class="card-image carousel-container">
+                                <div class="carousel">
+                                    <div class="carousel-item active">
+                                        <img src="image/Project Mobile Developer.jpeg" alt="Mobile Developer Project" style="width: 100%; height: 250px; object-fit: cover; border-radius: 5px;">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="image/project aplikasi.jpeg" alt="Aplikasi Project" style="width: 100%; height: 250px; object-fit: cover; border-radius: 5px;">
+                                    </div>
+                                </div>
+                                <button class="carousel-prev" onclick="changeSlide(this, -1)">❮</button>
+                                <button class="carousel-next" onclick="changeSlide(this, 1)">❯</button>
+                                <div class="carousel-dots">
+                                    <span class="dot active" onclick="goToSlide(this.parentElement.parentElement, 0)"></span>
+                                    <span class="dot" onclick="goToSlide(this.parentElement.parentElement, 1)"></span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Mobile & Aplikasi Development</h3>
+                                <p>Cross-platform mobile applications and full-featured desktop/web applications with responsive design and robust functionality</p>
+                                <div class="card-tech">
+                                    <span>Flutter</span>
+                                    <span>React Native</span>
+                                    <span>JavaScript</span>
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                    <span>Database</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Analog Digital Project -->
+                        <div class="portfolio-card">
+                            <div class="card-image">
+                                <img src="image/project analog digital.jpeg" alt="Analog Digital Project" style="width: 100%; height: 250px; object-fit: cover; border-radius: 5px;">
+                            </div>
+                            <div class="card-content">
+                                <h3>Analog Digital System</h3>
+                                <p>Integration of analog and digital systems with signal processing and hardware control</p>
+                                <div class="card-tech">
+                                    <span>Electronics</span>
+                                    <span>Signal Processing</span>
+                                    <span>Hardware</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Website Project -->
+                        <div class="portfolio-card">
+                            <div class="card-image">
+                                <img src="image/project website.jpeg" alt="Website Project" style="width: 100%; height: 250px; object-fit: cover; border-radius: 5px;">
+                            </div>
+                            <div class="card-content">
+                                <h3>Web Development</h3>
+                                <p>Modern responsive websites with clean design, smooth animations, and optimal UX</p>
+                                <div class="card-tech">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>Responsive</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CERTIFICATES TAB -->
+                <div id="certificates" class="tab-content">
+                    <div class="portfolio-grid">
+                        <div class="portfolio-card">
+                            <div class="card-image">
+                                <img src="asset/Sertif DIMA.jpg" alt="Sertif DIMA" style="width: 100%; height: 250px; object-fit: cover; border-radius: 5px;">
+                            </div>
+                            <div class="card-content">
+                                <h3>Sertifikat DIMA</h3>
+                                <p>Digital Marketing & AI Mastery Certification</p>
+                                <div class="card-tech">
+                                    <span>2024</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-card">
+                            <div class="card-image">
+                                <img src="asset/SERTIF MP3 PESERTA.jpg" alt="Sertif MP3" style="width: 100%; height: 250px; object-fit: cover; border-radius: 5px;">
+                            </div>
+                            <div class="card-content">
+                                <h3>Sertifikat MP3 Peserta</h3>
+                                <p>Pengenalan Kampus</p>
+                                <div class="card-tech">
+                                    <span>2024</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-card">
+                            <div class="card-image">
+                                <img src="asset/sertif SQL.jpg" alt="Sertif SQL" style="width: 100%; height: 250px; object-fit: cover; border-radius: 5px;">
+                            </div>
+                            <div class="card-content">
+                                <h3>Sertifikat SQL</h3>
+                                <p>Database Management & Query Language</p>
+                                <div class="card-tech">
+                                    <span>2024</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-card">
+                            <div class="card-image">
+                                <img src="asset/Sertif Ujikom.jpeg" alt="Sertif Ujikom" style="width: 100%; height: 250px; object-fit: cover; border-radius: 5px;">
+                            </div>
+                            <div class="card-content">
+                                <h3>Sertifikat Ujikom</h3>
+                                <p>Professional Skills & Competency Testing</p>
+                                <div class="card-tech">
+                                    <span>2024</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-card">
+                            <div class="card-image">
+                                <img src="asset/SertifPMPO (1).jpeg" alt="Sertif PMPO" style="width: 100%; height: 250px; object-fit: cover; border-radius: 5px;">
+                            </div>
+                            <div class="card-content">
+                                <h3>Sertifikat PMPO</h3>
+                                <p>Masa Pembekalan Perkuliahan</p>
+                                <div class="card-tech">
+                                    <span>2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section contact-section">
+            <div class="contact-content">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's connect and create something amazing together</p>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p>Feel free to reach out through any of these channels:</p>
+                        
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <span class="contact-label">Email:</span>
+                                <a href="mailto:rafiqksm18@gmail.com" class="contact-link">rafiqksm18@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Phone/WhatsApp:</span>
+                                <a href="https://wa.me/6283840042546" class="contact-link" target="_blank">+62 838 4004 2546</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Location:</span>
+                                <p>Kota Cimahi, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>Follow Me On</h3>
+                        <div class="social-grid">
+                            <a href="mailto:rafiqksm18@gmail.com" class="social-btn email" title="Email">
+                                <img src="asset/gmail.jpg" alt="Email" class="social-icon">
+                                <span>Email</span>
+                            </a>
+                            <a href="https://www.instagram.com/Rafiq_Kusuma/" target="_blank" class="social-btn instagram" title="Instagram">
+                                <img src="asset/instagram.webp" alt="Instagram" class="social-icon">
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/rafiq-kusuma-hidayat-760626319?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="social-btn linkedin" title="LinkedIn">
+                                <img src="asset/linkedin.webp" alt="LinkedIn" class="social-icon">
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/RafiqKusumaHidayat" target="_blank" class="social-btn github" title="GitHub">
+                                <img src="asset/github.png" alt="GitHub" class="social-icon">
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <p>&copy; 2024 Rafiq Kusuma Hidayat. All rights reserved.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
